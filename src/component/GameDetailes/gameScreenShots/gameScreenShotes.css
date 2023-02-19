@@ -1,0 +1,6 @@
+.GameScreenShotes ul{
+    overflow-x: scroll;
+    padding: 10px 0px;
+    overflow-y: hidden;
+
+}

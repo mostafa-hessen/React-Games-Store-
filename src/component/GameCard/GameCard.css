@@ -1,0 +1,130 @@
+.Game__container {
+        padding: 15px;
+        /*min-height: 270px;
+        */min-height: fit-content;
+        background-color: #35356b;
+        border-radius: 30px;
+        transition: all .56s ease-in-out;
+        -webkit-transition: all 1s  ease-in-out ;
+        -moz-transition: all 1s  ease-in-out ;
+        -ms-transition: all 1s  ease-in-out ;
+        -o-transition: all 1s  ease-in-out ;
+        position: relative;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        /* animation-name: skotlite;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        transition: all 1s  ease-in-out ; */
+        /* animation-timing-function: linear; */
+
+}
+
+
+@keyframes skotlite {
+  to{
+    opacity: 0.5;
+    transition: all 1s  ease-in-out ;
+    -webkit-transition: all 1s  ease-in-out ;
+    -moz-transition: all 1s  ease-in-out ;
+    -ms-transition: all 1s  ease-in-out ;
+    -o-transition: all 1s  ease-in-out ;
+}
+  
+}
+  .text-gold{
+    color:gold
+  }
+
+  .text-darktheme{
+color: #4a4a8a;
+  }
+
+  .iconLink{
+    text-align: right;
+    margin-left: auto;
+    margin-right: 5px;
+
+  }
+  .myLink{
+    text-decoration: none;
+  }
+ 
+ 
+  .Game__container .img {
+    width: 100%;
+    min-height: 220px;
+    overflow: hidden;
+    border-radius: 35px;
+    position: relative;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius: 35px;
+    cursor: pointer;
+    z-index: 1;
+}
+.Game__container  .btn{
+  padding: 2px 10px;
+  font-size: 14px;
+
+
+}
+.Game__container   .icons{
+    padding-left: 4px;
+    cursor: pointer;
+  }
+
+.Game__container   .icons i{
+    padding: 0px 4px;
+  }
+  .Game__container .img img {
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top;
+    transition: 3.3s all linear;
+    -webkit-transition: 3.3s all linear;
+    -moz-transition: 3.3s all linear;
+    -ms-transition: 3.3s all linear;
+    -o-transition: 3.3s all linear;
+  }
+  
+ .btn-orange{
+  background-color: #fd9065 !important;
+  color:#FFF
+ }
+/* .StoreIcon{
+  width: 100px;
+  background-color: red;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+} */
+
+
+/* .Game__container .myStoreImg{
+  object-fit: cover;
+  object-position: top;
+} */
+ .btn-gold{
+  background-color: gold !important;
+  color:black;
+  font-weight: bold;
+ }
+@media (min-width:992px) {
+  .Game__container .img {
+    min-height: 200px;
+    
+  }
+  
+}

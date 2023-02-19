@@ -1,0 +1,18 @@
+.mycard{
+    overflow: hidden;
+    min-height: 300px;
+    min-width: 300px;
+    /* background-color: red; */
+    /* background-image: url('../image\ 1\ copy.jpg'); */
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+     
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin: 10px;
+    z-index: 2;
+    border: 1px dashed #c2c2c4;
+}

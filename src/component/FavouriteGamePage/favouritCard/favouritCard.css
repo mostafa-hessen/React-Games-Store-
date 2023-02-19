@@ -1,0 +1,46 @@
+.mycard_favourite{
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+
+.myCardDescription{
+    background-color: red;
+    background-image: linear-gradient(0deg, rgb(39, 38, 78) 10%, rgb(39, 38, 78) 25%, rgba(39, 38, 78, 0.904) 54%, rgba(39, 38, 78, 0.655) 100%);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    transition:   all 1s;
+    display: flex;
+    justify-content: space-between;
+    -webkit-transition:   all 1s;
+    -moz-transition:   all 1s;
+    -ms-transition:   all 1s;
+    -o-transition:   all 1s;
+    /* cursor: pointer; */
+}
+    .mycard_favourite:hover 
+.myCardDescription
+{
+    height: 30%;
+    opacity: 1;
+}
+
+.myCardDescription .btn{
+    height: 30px;
+    width: 30px;
+    font-size: 14px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* line-height: 10; */
+
+}

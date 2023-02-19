@@ -1,0 +1,14 @@
+.card{
+    overflow: hidden;
+    min-height: 350px;
+    background-color: red;
+    background-image: url('../image\ 1\ copy.jpg');
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+     
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}

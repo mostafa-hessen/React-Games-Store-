@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+}
+
+.Filter__container {
+    padding: 15px;
+    /*min-height: 270px;
+    */
+    min-height: 250px;
+    background-color: #35356b;
+    border-radius: 30px;
+    transition: all .56s ease-in-out;
+    -webkit-transition: all .56s ease-in-out;
+    -moz-transition: all .56s ease-in-out;
+    -ms-transition: all .56s ease-in-out;
+    -o-transition: all .56s ease-in-out;
+    position: relative;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+  
+.Filter__container     ul .list-group-item:not(:last-child){
+
+
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(154, 154, 154, 0.536);
+
+}
+
+.Filter__container    h6,.Filter__container    label{
+    color:#ebdcdc
+}

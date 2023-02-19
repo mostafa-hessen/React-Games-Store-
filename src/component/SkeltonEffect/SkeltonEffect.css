@@ -1,0 +1,92 @@
+.Skelton__container {
+  padding: 15px;
+  min-height: fit-content;
+  background-color: #35356b;
+  border-radius: 30px;
+  transition: all 1s ease-in-out;
+  -webkit-transition: all 1s  ease-in-out ;
+  -moz-transition: all 1s  ease-in-out ;
+  -ms-transition: all 1s  ease-in-out ;
+  -o-transition: all 1s  ease-in-out ;
+  position: relative;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  animation-name: skotlite;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  transition: all 1s  ease-in-out ;
+}
+
+@keyframes skotlite {
+   to {
+    opacity: 0.6;
+  }
+}
+
+
+.Skelton__container  .img ,
+    .Skelton__container .StoreIcon ,
+    .Skelton__container .skeltonName,
+    .Skelton__container .mybtn,
+    .Skelton__container .icons {
+        background-color: #27264e;
+        animation-name: skotlite;
+        animation-duration: .8s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+}
+    
+.Skelton__container  .img {
+  width: 100%;
+  min-height: 220px;
+  overflow: hidden;
+  border-radius: 35px;
+  position: relative;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  -ms-border-radius: 35px;
+  -o-border-radius: 35px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.Skelton__container .StoreIcon {
+  min-width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.Skelton__container .skeltonName{
+  width: 250px;
+  height: 40px;
+  margin: 0;
+  margin-left: 16px;
+}
+.Skelton__container .icons {
+  width: 25px;
+  height: 25px;
+  margin: 2px;
+  border-radius:5px ;
+  -webkit-border-radius:5px ;
+  -moz-border-radius:5px ;
+  -ms-border-radius:5px ;
+  margin-right: 10px;
+  -o-border-radius:5px ;
+}
+
+.Skelton__container .mybtn{
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}

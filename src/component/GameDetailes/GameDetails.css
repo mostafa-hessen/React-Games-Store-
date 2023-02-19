@@ -1,0 +1,52 @@
+.detailes {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  z-index: 1;
+
+  background-color: #27264e;
+
+  /* background-image: linear-gradient(0deg, #272a37 0%, #272a37 55%, #272a37ec 68%, #272a3798 100%), */
+}
+
+.overlayGameDet {
+  position: absolute;
+  width: 100%;
+  height: 50vh;
+  background: position center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-color: red; */
+  background-image: linear-gradient(
+      0deg,
+      #27264e 0%,
+      #27264efa 55%,
+      #27264edd 64%,
+      #27264ea7 90%
+    ),
+    url("./image\ 1\ copy.jpg");
+}
+
+.gameDetailes {
+  position: relative;
+  z-index: 5;
+  min-height: 200px;
+  margin-top: 180px !important;
+  margin-left: 50px !important;
+}
+
+@media (min-width: 992px) {
+  .overlayGameDet {
+    height: 80vh;
+  }
+
+  .gameDetailes {
+    position: relative;
+    z-index: 5;
+    min-height: 200px;
+    margin-top: 220px !important;
+    /* margin-left: 20px; */
+  margin-left: 90px !important;
+
+  }
+}
