@@ -103,13 +103,11 @@ function GameCard(props) {
           >
             {/* props.addtofavorit.favoriteFunc(props.element) */}
 
-      {MyFavouriteGames.find(ele=>ele.id==props.element.id)? 
+      {MyFavouriteGames?MyFavouriteGames.find(ele=>ele.id==props.element.id)? 
             <i className="fa-solid fa-heart text-danger"> 13</i>  :
             <i className="fa-regular text-danger fa-heart"
             // onClick={()=>favoriteFunc(props.element)}
-            > 12</i> 
-
-      
+            > 12</i>  :''
     
     }
 
