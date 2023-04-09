@@ -12,11 +12,7 @@ import ImgCard from "./imgCard/ImgCard";
 function GameDetails() {
   const Game = useSelector((state)=> state.GameDetailes.GameDetailes)
   const dispatch = useDispatch()
-  useEffect(() => {
-  //  dispatch(getUrlData())
-  //  console.log(Games);
-  }, [])
-  
+ 
   let imgUrl = "./image 1 copy.jpg";
   return (
     <>

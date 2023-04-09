@@ -12,8 +12,7 @@ import {
 } from "react-router-dom";
 import FavouriteGame from "./component/FavouriteGamePage/FavouriteGame";
 import SkeltonEffect from "./component/SkeltonEffect/SkeltonEffect";
-// import Modal from './test'
-// import { Modal } from "bootstrap";
+ 
 function App() {
   return (
     <section className="app text-light">

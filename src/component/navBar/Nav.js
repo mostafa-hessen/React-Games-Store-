@@ -17,7 +17,7 @@ function Nav() {
       <header className="d-flex  align-items-center justify-content-between">
 
         <div className=" col-6    BeboSocialContainer justify-content-center text-center">
-          <h3 className="log text-light">BeboSocial</h3>
+          <Link className="log text-light"  style={{fontSize:"18px",fontWeight:"bold",textDecoration:"none"}}to='/'>BeboSocial</Link>
         </div>
 
 {/* {console.log(MyFavouriteGames)} */}

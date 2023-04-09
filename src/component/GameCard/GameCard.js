@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { GameDetaileFunc } from "../../redux/actions";
 import "./GameCard.css";
-import NintendoStore from "./imaged/playstation-store.jpg";
+// import NintendoStore from "./imaged/playstation-store.jpg";
 
 // import img from "./image 1 copy.jpg";
 
@@ -11,7 +11,7 @@ function GameCard(props) {
   
   let MyFavouriteGames=useSelector( state=>state.MyFavouriteGames.favoriteGames)
 
-  let my="playstation-store"
+  // let my="playstation-store"
   const filterVal = useSelector((state) => state.allGame.filterValue);
   const dispatch = useDispatch();
   const ClickedDetailes = (e) => {
@@ -100,28 +100,25 @@ function GameCard(props) {
           <div
             className="favourit icons"
             onClick={()=>props.addtofavorit(props.element)}
+            // onClick={()=>props.addtofavorit(props.element)}
           >
-            {/* props.addtofavorit.favoriteFunc(props.element) */}
 
-      {MyFavouriteGames?MyFavouriteGames.find(ele=>ele.id==props.element.id)? 
-            <i className="fa-solid fa-heart text-danger"> 13</i>  :
-            <i className="fa-regular text-danger fa-heart"
-            // onClick={()=>favoriteFunc(props.element)}
-            > 12</i>  :''
+      {
+      MyFavouriteGames!=null?
+      MyFavouriteGames.find(ele=>ele.id==props.element.id)? 
+            <i className="fa-solid fa-heart text-danger"> 13</i>  : <i className="fa-regular text-danger fa-heart"
+           > 12</i> : <i className="fa-regular text-danger fa-heart"
+           > 12</i>
+      
     
     }
 
-            {/* <i className="fa-solid fa-heart"></i>
-            <i className="fa-regular text-danger fa-heart"
-            onClick={()=>favoriteFunc(props.element)}
-            ></i> */}
-            {/* <span className="count">12</span> */}
+         
           </div>
           <div className=" icons">
             {/* <i class="fa-thin fa-comment-dots"></i> */}
             <i className="fa-solid fa-paper-plane text-darktheme"></i>
             32
-            {/* <span className="count">{props.element.ratings[0]['id']}</span> */}
           </div>
 
           <div className=" icons iconLink">
@@ -132,8 +129,6 @@ function GameCard(props) {
         </div>
       </div>
     </div>
-    // </Link>
-    // <button className="btn bg-primary">Next</button>
   );
 }
 

@@ -66,9 +66,10 @@ function Home() {
     }, 2000);
     dispatch(getUrlData(pageNumber, sraechVal, filterVal));
   }, [sraechVal]);
+  const [favorite, setfavorite] = useState(['kjkm']);
 
   useEffect(() => {
-    let getitemFromLocal = JSON.parse(localStorage.getItem("FavouriteItems"));
+    let getitemFromLocal = localStorage.getItem("FavouriteItems")?JSON.parse(localStorage.getItem("FavouriteItems")):[];
 
     setfavorite(getitemFromLocal);
 
@@ -77,7 +78,6 @@ function Home() {
     );
   }, []);
 
-  const [favorite, setfavorite] = useState([]);
   const [alert, setalert] = useState("");
   // let alert='kjwidjqiwojiojciowoejfdiowejfioejfioqej';
   let setToLocalStorage = (ele) => {
@@ -86,26 +86,38 @@ function Home() {
 
   const favoriteFunc = (element) => {
     // let i =  favorite!=[]? [...favorite]:favorite
-    let newItem = [...favorite];
+    console.log(favorite);
+    let newItem = 
+    favorite? [...favorite]:[]
+    console.log(newItem);
 
-    favorite.find((ele) => ele.id == element.id)
+    setfavorite(newItem);
+
+    // if(favorite)
+    // { 
+      favorite!=null? favorite.find((ele) => ele.id == element.id)
       ? setalert(
           <div class="alert alert-danger" role="alert">
             A simple danger alert—check it out!
           </div>
         )
-      : newItem.push(element);
+      : newItem.push(element):newItem.push(element)
 
-    newItem.find((ele) => console.log(ele));
+    // newItem.find((ele) => console.log(ele));
 
-    setfavorite(newItem);
+    // setfavorite(newItem);
 
     setToLocalStorage(newItem);
 
     dispatch(
       getFromLocalStorage(JSON.parse(localStorage.getItem("FavouriteItems")))
     );
+  // }
   };
+
+  const removeFavoriteFunc=(id)=>{
+
+  }
   return (
     <div className="row">
       <div className="col-lg-3 p-4   d-none  d-lg-block">
@@ -128,7 +140,12 @@ function Home() {
                     key={ele.id}
                     element={ele}
                     addtofavorit={favoriteFunc}
+
+                    removeFromFav={removeFavoriteFunc}
                   />
+
+
+
                 );
               })}
 

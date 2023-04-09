@@ -1,6 +1,23 @@
 import React from "react";
 import './favouritCard.css'
+import { getFromLocalStorage, getUrlData } from "../../../redux/actions/index";
+import { useDispatch } from "react-redux";
+
+
 function FavouritCard(props) {
+  let dispatch =useDispatch()
+  let setToLocalStorage = (ele) => {
+    localStorage.setItem("FavouriteItems", JSON.stringify(ele));
+  };
+
+  const removeFromVav =(id)=>{
+    console.log(id);
+    let afterDelete= JSON.parse( localStorage.getItem('FavouriteItems')).filter(ele=>ele.id!=id)
+    localStorage.setItem('FavouriteItems',JSON.stringify(afterDelete))
+    dispatch(
+      getFromLocalStorage(JSON.parse(localStorage.getItem("FavouriteItems")))
+    );
+  }
   return (
     // <divFavouritCard</div>
 
@@ -20,7 +37,7 @@ function FavouritCard(props) {
 
         <div className="myCardDescription p-3">
             <h4>{ props.img.name}</h4>
-            <button className="btn btn-danger">X</button>
+            <button className="btn btn-danger" onClick={()=>removeFromVav(props.img.id)} >X</button>
         </div>
       </div>
     </div>
