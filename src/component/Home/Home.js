@@ -69,7 +69,7 @@ function Home() {
   const [favorite, setfavorite] = useState(['kjkm']);
 
   useEffect(() => {
-    let getitemFromLocal = localStorage.getItem("FavouriteItems")?JSON.parse(localStorage.getItem("FavouriteItems")):[];
+    let getitemFromLocal = localStorage.getItem("FavouriteItems")==[]?JSON.parse(localStorage.getItem("FavouriteItems")):[];
 
     setfavorite(getitemFromLocal);
 
