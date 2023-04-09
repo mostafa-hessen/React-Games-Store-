@@ -1,19 +1,26 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import "./Home.css";
+import { toast } from 'react-toastify';
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import Hero from "../hero/Hero";
 import SearchNav from "../searchNav/SearchNav";
 import GameCard from "../GameCard/GameCard";
-// import FilterComp from "../FilterComponent/FilterComp";
 import FavoriteStore from "../FavouriteStore/FavoriteStore";
 import { useDispatch, useSelector } from "react-redux";
 import { getFromLocalStorage, getUrlData } from "../../redux/actions/index";
 import FilterComp from "../FilterComponent/FilterComp";
 import SkeltonEffect from "../SkeltonEffect/SkeltonEffect";
 function Home() {
-  // let arr[]
-
+  const notify=()=> toast(" 🐱‍🏍 added   to favourite successfully ",{position: "top-right",
+  autoClose: 3000,
+  hideProgressBar: true,
+  closeOnClick: true,
+  pauseOnHover: true,
+  draggable: true,
+  progress: undefined,
+  theme: "dark"})
   const dispatch = useDispatch();
   const GamesData = useSelector((state) => state.allGame.Games); // array of Games => 15 array
   const sraechVal = useSelector((state) => state.allGame.searchValue);
@@ -30,7 +37,6 @@ function Home() {
     }, 2000);
     dispatch(getUrlData(pageNumber, search, filter));
   }, [pageNumber]);
-  // [pageNumber, filter, search]);
  
 
   useEffect(() => {
@@ -66,11 +72,12 @@ function Home() {
     }, 2000);
     dispatch(getUrlData(pageNumber, sraechVal, filterVal));
   }, [sraechVal]);
-  const [favorite, setfavorite] = useState(['kjkm']);
+  const [favorite, setfavorite] = useState(JSON.parse(localStorage.getItem("FavouriteItems"))?JSON.parse(localStorage.getItem("FavouriteItems")):['kjkm']);
 
   useEffect(() => {
-    let getitemFromLocal = localStorage.getItem("FavouriteItems")==[]?JSON.parse(localStorage.getItem("FavouriteItems")):[];
+    let getitemFromLocal = localStorage.getItem("FavouriteItems")?JSON.parse(localStorage.getItem("FavouriteItems")):[];
 
+    console.log(getitemFromLocal);
     setfavorite(getitemFromLocal);
 
     dispatch(
@@ -85,8 +92,7 @@ function Home() {
   };
 
   const favoriteFunc = (element) => {
-    // let i =  favorite!=[]? [...favorite]:favorite
-    console.log(favorite);
+  
     let newItem = 
     favorite? [...favorite]:[]
     console.log(newItem);
@@ -112,6 +118,10 @@ function Home() {
     dispatch(
       getFromLocalStorage(JSON.parse(localStorage.getItem("FavouriteItems")))
     );
+
+    notify()
+
+
   // }
   };
 

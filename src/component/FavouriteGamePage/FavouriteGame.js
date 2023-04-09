@@ -4,15 +4,13 @@ import FavouritCard from './favouritCard/favouritCard'
 
 function FavouriteGame() {
   
-   let  MyFavouriteGames=useSelector( state=>state.MyFavouriteGames.favoriteGames)
-//  useEffect(() => {
-//  }, [])
+   let  MyFavouriteGames=useSelector( state=>state.MyFavouriteGames.favoriteGames)||JSON.parse(localStorage.getItem('FavouriteItems'))
  
   console.log("=>",MyFavouriteGames);
   return (
     <div className="container mt-3">
       <div className='row'>
-         {MyFavouriteGames==undefined||MyFavouriteGames?.length===0? <div style={{
+         {MyFavouriteGames===undefined||MyFavouriteGames?.length===0? <div style={{
               position: 'absolute',
               top: '50%',
               transform: "translate(40%, 50%)",

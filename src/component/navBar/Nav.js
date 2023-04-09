@@ -4,7 +4,7 @@ import { BrowserRouter, Link, Router } from 'react-router-dom'
 import './Nav.css'
 function Nav() {
   
-  let MyFavouriteGames=useSelector( state=>state.MyFavouriteGames.favoriteGames)
+  let MyFavouriteGames=useSelector( state=>state.MyFavouriteGames.favoriteGames)||JSON.parse(localStorage.getItem('FavouriteItems'))
   //   const [count, setCount] = useState()
   // useEffect(() => {
   //   setCount(MyFavouriteGames)

@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {  Provider } from 'react-redux';
 import { applyMiddleware, createStore } from 'redux';
+import 'react-toastify/dist/ReactToastify.css';
 // import  {Reduceres}  from './redux/reducers/reducerGetUrl';
 import thunk from 'redux-thunk';
 import GetDataReducer from './redux/reducers/reducerGetUrl';

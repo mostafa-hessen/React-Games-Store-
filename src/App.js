@@ -8,18 +8,26 @@ import {
   BrowserRouter ,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 import FavouriteGame from "./component/FavouriteGamePage/FavouriteGame";
-import SkeltonEffect from "./component/SkeltonEffect/SkeltonEffect";
- 
+import { ToastContainer } from 'react-toastify';
+
 function App() {
   return (
     <section className="app text-light">
       <BrowserRouter>
       <Nav />
 
-
+<ToastContainer toastStyle={{background:'linear-gradient(to right, #b92b27, #1565c0)'}} position="top-right"
+autoClose={3000}
+hideProgressBar
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="dark"/>
 
       <Switch>
           <Route exact path="/">
