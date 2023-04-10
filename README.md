@@ -18,12 +18,13 @@ This project is used by the following technologies:
 - Redux thunk
 - axios for API
 - BootStrap
-- Toaster For Alert
+- ReactToaster For Alert
 
 
 ## Functions
 
 - Search
+- Pagination
 - Show Detaiels of every Game
 - Filteration by cateogry
 - Add to favourite
