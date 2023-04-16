@@ -18,7 +18,7 @@ This project is used by the following technologies:
 - Redux thunk
 - axios for API
 - BootStrap
-- ReactToaster For Alert
+- ReactToaster For Alerts
 
 
 ## Functions
